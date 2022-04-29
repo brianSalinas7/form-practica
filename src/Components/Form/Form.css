@@ -1,0 +1,22 @@
+.form-conteiner{
+    height: 100vh;
+    background-color: rgba(57, 57, 57, 0.69);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+}
+
+.form-body {
+    width: 40%;
+    margin: 50px auto;
+    padding: 15px;
+    background-color: rgb(224, 223, 223);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

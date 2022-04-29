@@ -1,0 +1,8 @@
+.user-conteiner{
+    width: 80%;
+    min-height: 100px;
+    background-color: rgba(120, 120, 120, 0.3);
+    margin: 10px auto;
+    padding: 15px;
+    
+}

@@ -1,0 +1,14 @@
+.header {
+    width: 80%;
+    margin: auto;
+    height: 60px;
+    background-color: blue;
+}
+
+.header>nav {
+    height: 55px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 15px;
+}
