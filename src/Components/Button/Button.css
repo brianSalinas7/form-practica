@@ -1,16 +1,21 @@
 .button-form{
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     outline: none;
     border: none;
-    background-color: rgb(112, 112, 231);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    font-weight: 600;
 }
 .conteiner-btn{
     display: flex;
     justify-content: center;
     margin: 40px 0 20px 0;
+}
+
+.btn-form{
+    display: flex;
+    justify-content: space-around;
 }

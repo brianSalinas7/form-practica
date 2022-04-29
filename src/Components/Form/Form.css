@@ -10,7 +10,7 @@
 }
 
 .form-body {
-    width: 40%;
+    max-width: 400px;
     margin: 50px auto;
     padding: 15px;
     background-color: rgb(224, 223, 223);
@@ -19,4 +19,12 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+#save-btn {
+    background-color: #153E90 ;
+}
+
+#cancel-btn {
+    background-color: #F24A72;
 }

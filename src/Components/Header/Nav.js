@@ -7,7 +7,6 @@ const Nav = () => {
 
   const handleClick = () => {
     setShow(true)
-    console.log(show)
   }
   return (
     <header className='header'>

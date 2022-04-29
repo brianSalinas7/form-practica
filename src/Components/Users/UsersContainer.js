@@ -11,6 +11,7 @@ const UsersContainer = () => {
     <div  className="user-conteiner">
        
         {
+          usuarios.length > 0 ?
           usuarios.map((x,i) => (
           <User 
           name={x.name}
@@ -18,6 +19,8 @@ const UsersContainer = () => {
           email={x.email}
           key={i}
           />))
+          :
+          <h5>No hay usuarios!</h5>
         }
         {
         show ? 

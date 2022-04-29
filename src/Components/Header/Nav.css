@@ -2,7 +2,12 @@
     width: 80%;
     margin: auto;
     height: 60px;
-    background-color: blue;
+    background-color: #153E90;
+    border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -ms-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
 }
 
 .header>nav {
@@ -11,4 +16,18 @@
     justify-content: end;
     align-items: center;
     padding: 0 15px;
+}
+
+.btn-agregar {
+    background-color: #54E346;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }

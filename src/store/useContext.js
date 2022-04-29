@@ -24,21 +24,26 @@ const getLocalUser =() => {
 
 
 
-
-
-
-
 const UserContextProvider = ({children}) => {
     const [show, setShow] = useState(false)
     const [usuarios,setUsuarios] = useState(getLocalUser())
+    const [isEditing, setIsEditing] = useState(false)
+    const [seleccionado, setSeleccionado] = useState({name:'', lastname:'', email:''})
 
     useEffect(() => {
         localStorage.setItem("usuariosLS", JSON.stringify(usuarios))
     },[usuarios])
 
+    const handleEdit = (data) =>{
+        setIsEditing(true)
+		const encontrado = usuarios.find(x => x.email === data)
+        setSeleccionado(encontrado)
+
+	}
+
 
   return (
-   <UserContext.Provider value={{usuarios, setUsuarios,show, setShow}}>
+   <UserContext.Provider value={{usuarios, setUsuarios,show, setShow, isEditing, setIsEditing, seleccionado,handleEdit}}>
        {children}
    </UserContext.Provider>
   )

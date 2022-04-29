@@ -7,8 +7,8 @@ import { useUserContext } from '../../store/useContext';
 
 
 
-const Form = () =>{
-    const {usuarios, setUsuarios , show, setShow} = useUserContext()
+const Form = ({name,lastname,email}) =>{
+    const {usuarios, setUsuarios , setShow, isEditing, setIsEditing,seleccionado} = useUserContext()
     
     const [formulario, handleChange,reset] = useFormulario({name:'', lastname:'', email: ''})
   
@@ -24,23 +24,52 @@ const Form = () =>{
       reset()
       
       setShow(false)
-      
+      setIsEditing(false)
     }
 
-   
-    
+   const handleCancelEdit = () =>{
+     setIsEditing(false)
+     setShow(false)
+   }
 
+
+    
+  
+  
    return(
-   <div className='form-conteiner'>
+     <>
+   {!isEditing ?
+    <div className='form-conteiner'>
         <form onSubmit={handleSubmit} className="form-body">
           <Inputs value={formulario.name} name="name" placeholder="Nombre" onChange={handleChange} type="text" />
           <Inputs value={formulario.lastname} name="lastname" placeholder="Apellido" onChange={handleChange} type="text"/>
           <Inputs value={formulario.email} name="email" placeholder="example@gmail.com" onChange={handleChange} type="email" />
 
-          <Button type="submit"/>
+          <div className='btn-form'>
+          <Button id="save-btn" type="submit" name="Guardar"/>
+          <Button id="cancel-btn" type="submit" name="Cancelar" onClick={()=> handleCancelEdit()}/>
+          </div>
+
         </form>
-    </div>)
+    </div>
+    :
+
+    <div className='form-conteiner'>
+        <form onSubmit={handleSubmit} className="form-body">
+          <Inputs value={seleccionado.name} name="name" placeholder="Nombre" onChange={handleChange} type="text" />
+          <Inputs value={seleccionado.lastname} name="lastname" placeholder="Apellido" onChange={handleChange} type="text"/>
+          <Inputs value={seleccionado.email} name="email" placeholder="example@gmail.com" onChange={handleChange} type="email" />
+
+          <div className='btn-form'>
+          <Button id="save-btn" type="submit" name="Guardar"/>
+          <Button id="cancel-btn" type="submit" name="Cancelar" onClick={()=> handleCancelEdit()}/>
+          </div>
+
+        </form>
+    </div>
+    
 }
+</>)}
 
 
 export default Form
