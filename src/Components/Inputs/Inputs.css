@@ -1,0 +1,13 @@
+.fields {   
+    width: 85%;
+    margin: auto;
+}
+
+.fields input{
+    margin: 10px auto;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(112, 112, 231);
+    background-color: transparent;
+}
